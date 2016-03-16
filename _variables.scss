@@ -1,0 +1,62 @@
+/* sassy scss library
+ * _variables.scss
+ * a template for variables to be used in SCSS files
+ * import using at top of file: 'import variables';
+ * by Sy Dyat <sytantris.dyat@gmail.com>
+ * init: 2014-02-18
+ * update: 2016-03-16
+ */
+
+
+
+/***** FONTS *****/
+$FontBody: sans-serif;
+$FontHeader: auto;
+$FontAlt: auto;
+
+
+
+/***** COLOURS *****/
+
+/* Global */
+$ColourBodyBG: auto;
+$ColourBodyText: auto;
+$ColourLink: auto;
+$ColourLinkHover: auto;
+
+
+/* Header */
+$ColourHeaderBG: auto;
+$ColourHeaderText: auto;
+$ColourHeaderTextAlt: auto;
+$ColourNavLink: auto;
+$ColourNavLinkHover: auto;
+
+
+/* Sections */
+$ColourSectionBG: auto;
+$ColourSectionHeaderText: auto;
+$ColourSectionText: auto;
+$ColourSectionTextAlt: auto;
+$ColourSectionLink: auto;
+$ColourSectionLinkHover: auto;
+
+
+/* Borders & Shadow */
+$ColourBorder: auto;
+$ColourTextShadow: auto;
+$ColourBoxShadow: auto;
+
+
+/* ColourScheme */
+$ColourOne: white;
+$ColourTwo: white;
+$ColourThree: white;
+
+$ColourOneDark: darken($ColourOne, 10%);
+$ColourTwoDark: darken($ColourTwo, 10%);
+$ColourThreeDark: darken($ColourThree, 10%);
+
+$ColourOneLight: lighten($ColourOne, 10%);
+$ColourTwoLight: lighten($ColourTwo, 10%);
+$ColourThreeLight: lighten($ColourThree, 10%);

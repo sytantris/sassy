@@ -1,0 +1,21 @@
+/* Mirror directions */
+@function mirror ($direction) {
+  @if($direction == 'top', @return 'to bottom',
+    (@if($direction == 'bottom', @return 'to top',
+      (@if($direction == 'left', @return 'to right',
+        (@if($direction == 'right', @return 'to left'))
+      ))
+    ))
+  );
+}
+
+
+/* Linear Gradient */
+@mixin linear-gradient ($direction, $stops...) {
+  $mirrored-direction: 'to ' + mirror($direction);
+  background-image: -webkit-linear-gradient($direction, $stops);
+  background-image: -moz-linear-gradient($direction, $stops);
+  background-image: -ms-linear-gradient($direction, $stops);
+  background-image: -o-linear-gradient($direction, $stops);
+  background-image: linear-gradient($mirrored-direction, $stops);
+}
