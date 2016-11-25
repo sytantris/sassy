@@ -1,21 +1,32 @@
-/* Mirror directions */
+// sassy scss library
+// by Sy Dyat <sytantris.dyat@gmail.com>
+//
+// _mixins-test.scss
+// mixins in progress
+// import using at top of file: @import '_mixins-test.scss';
+//
+// init: 2014-02-18
+// update: 2016-09-29
+
+
+// mirror directions //
 @function mirror ($direction) {
-  @if($direction == 'top', @return 'to bottom',
-    (@if($direction == 'bottom', @return 'to top',
-      (@if($direction == 'left', @return 'to right',
-        (@if($direction == 'right', @return 'to left'))
-      ))
-    ))
-  );
+  @each $d in $direction {
+    @if($direction == 'top') { @return 'bottom'; }
+    @if($direction == 'bottom') { @return 'top'; }
+    @if($direction == 'left') { @return 'right'; }
+    @if($direction == 'right') { @return 'left'; }
+    @else { @return $direction; }
+  }
 }
 
 
-/* Linear Gradient */
+// linear gradient //
 @mixin linear-gradient ($direction, $stops...) {
-  $mirrored-direction: 'to ' + mirror($direction);
+  $mirrored-direction: mirror($direction);
   background-image: -webkit-linear-gradient($direction, $stops);
   background-image: -moz-linear-gradient($direction, $stops);
   background-image: -ms-linear-gradient($direction, $stops);
   background-image: -o-linear-gradient($direction, $stops);
-  background-image: linear-gradient($mirrored-direction, $stops);
+  background-image: linear-gradient('to' + $mirrored-direction, $stops);
 }

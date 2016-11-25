@@ -1,15 +1,16 @@
-/* sassy scss library
- * _media.scss
- * a library of easy media queries and common viewport widths
- * import using at too of file: 'import media';
- * by Sy Dyat <sytantris.dyat@gmail.com>
- * init: 2014-02-18
- * update: 2016-03-16
- */
+// sassy scss library
+// by Sy Dyat <sytantris.dyat@gmail.com>
+//
+// _media.scss
+// a library of less annoying media queries
+// and common viewport widths
+// import using at top of file: 'import media';
+//
+// init: 2014-02-18
+// update: 2016-09-29
 
 
-
-/***** VARIABLES *****/
+////// VARIABLES //////
 $media-phone-portrait: 320px;
 $media-phone-landscape: 480px;
 $media-tablet-portrait: 768px;
@@ -18,28 +19,28 @@ $media-screen-large: 1200px;
 
 
 
-/***** MIXINS *****/
+////// MIXINS //////
 
-/* respond to all media up to and including $max width */
+// respond to all media up to and including $max width
 @mixin respond-to-max($max) {
   @media screen and (max-width: $max) { @content; }
 }
 
 
-/* respond to media over $min width */
+// respond to media over $min width
 @mixin respond-to-min($min) {
   @media screen and (min-width: $min + 1px) { @content; }
 }
 
 
-/* respond to media between ($min + 1px) and $max width */
+// respond to media between ($min + 1px) and $max width
 @mixin respond-to-interval($min, $max) {
   @media screen and (min-width: $min + 1px)
                 and (max-width: $max) { @content; }
 }
 
 
-/* respond to print media, hide all selectors given as parameters */
+// respond to print media, hide all selectors given as parameters
 @mixin respond-to-print ($hidden...) {
   @media print {
     @each $selector in $hidden {

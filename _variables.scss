@@ -1,62 +1,62 @@
-/* sassy scss library
- * _variables.scss
- * a template for variables to be used in SCSS files
- * import using at top of file: 'import variables';
- * by Sy Dyat <sytantris.dyat@gmail.com>
- * init: 2014-02-18
- * update: 2016-03-16
- */
+// sassy scss library
+// by Sy Dyat <sytantris.dyat@gmail.com>
+//
+// _variables.scss
+// a template for variables to be used in SCSS files
+// import using at top of file: 'import variables';
+//
+// init: 2014-02-18
+// update: 2016-09-29
+
+
+////// FONTS //////
+$Font-Body: sans-serif;
+$Font-Header: auto;
+$Font-Alt: auto;
 
 
 
-/***** FONTS *****/
-$FontBody: sans-serif;
-$FontHeader: auto;
-$FontAlt: auto;
+////// COLOURS //////
+
+// global //
+$Colour-Body-BG: auto;
+$Colour-Body-Text: auto;
+$Colour-Link: auto;
+$Colour-Link-Hover: auto;
 
 
-
-/***** COLOURS *****/
-
-/* Global */
-$ColourBodyBG: auto;
-$ColourBodyText: auto;
-$ColourLink: auto;
-$ColourLinkHover: auto;
+// header //
+$Colour-Header-BG: auto;
+$Colour-Header-Text: auto;
+$Colour-Header-Text-Alt: auto;
+$Colour-Nav-Link: auto;
+$Colour-Nav-Link-Hover: auto;
 
 
-/* Header */
-$ColourHeaderBG: auto;
-$ColourHeaderText: auto;
-$ColourHeaderTextAlt: auto;
-$ColourNavLink: auto;
-$ColourNavLinkHover: auto;
+// sections //
+$Colour-Section-BG: auto;
+$Colour-Section-Header-Text: auto;
+$Colour-Section-Text: auto;
+$Colour-Section-Text-Alt: auto;
+$Colour-Section-Link: auto;
+$Colour-Section-Link-Hover: auto;
 
 
-/* Sections */
-$ColourSectionBG: auto;
-$ColourSectionHeaderText: auto;
-$ColourSectionText: auto;
-$ColourSectionTextAlt: auto;
-$ColourSectionLink: auto;
-$ColourSectionLinkHover: auto;
+// borders & shadow //
+$Colour-Border: auto;
+$Colour-Text-Shadow: auto;
+$Colour-Box-Shadow: auto;
 
 
-/* Borders & Shadow */
-$ColourBorder: auto;
-$ColourTextShadow: auto;
-$ColourBoxShadow: auto;
+// colour scheme //
+$Colour-One: white;
+$Colour-Two: white;
+$Colour-Three: white;
 
+$Colour-One-Dark: darken($Colour-One, 10%);
+$Colour-Two-Dark: darken($Colour-Two, 10%);
+$Colour-Three-Dark: darken($Colour-Three, 10%);
 
-/* ColourScheme */
-$ColourOne: white;
-$ColourTwo: white;
-$ColourThree: white;
-
-$ColourOneDark: darken($ColourOne, 10%);
-$ColourTwoDark: darken($ColourTwo, 10%);
-$ColourThreeDark: darken($ColourThree, 10%);
-
-$ColourOneLight: lighten($ColourOne, 10%);
-$ColourTwoLight: lighten($ColourTwo, 10%);
-$ColourThreeLight: lighten($ColourThree, 10%);
+$Colour-One-Light: lighten($Colour-One, 10%);
+$Colour-Two-Light: lighten($Colour-Two, 10%);
+$Colour-Three-Light: lighten($Colour-Three, 10%);
